@@ -8,3 +8,5 @@ const navigationLinks = [
 ]
 
 export default navigationLinks
+
+// these will get exported and we will map through them to create link components 
