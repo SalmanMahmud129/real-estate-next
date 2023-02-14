@@ -22,10 +22,12 @@ function NavigationDesktop(){
                         Seamlessly Find Your NEXT Home
                 </Text>
                 </Link>
-                {navigationLinks.map((item) => (
-                    <NavigationLink key={item.title} {...item} />
-                ))}
-                <Button padding='1.5rem' colorScheme='twitter' fontSize='0.8rem' fontWeight='bold'>CREATE LISTING</Button>
+                <Flex gap='12' alignItems='center' fontWeight='medium'>
+                    {navigationLinks.map((item) => (
+                        <NavigationLink key={item.title} {...item} />
+                    ))}
+                    <Button padding='1.5rem' colorScheme='twitter' fontSize='0.8rem' fontWeight='bold'>CREATE LISTING</Button>
+                </Flex>
             </Flex>
         </Box>
         </Box>
