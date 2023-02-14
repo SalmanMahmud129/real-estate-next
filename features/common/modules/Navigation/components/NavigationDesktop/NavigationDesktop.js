@@ -35,7 +35,7 @@ function NavigationDesktop(){
 export default NavigationDesktop
 
 
-//going to grab the navigation links we imported from the file we made (navigationConsts) and map through the links in that array and create links to those navlinks
+//going to grab the navigation links we imported from the file we made (navigationConsts) and map through the links in that array and create links to those navlinks (line 25)
 const NavigationLink = ({title, link, icon}) =>{
     return (
         <Link href={link}>
