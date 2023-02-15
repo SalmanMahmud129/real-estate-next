@@ -1,3 +1,4 @@
+import Footer from "@/features/common/modules/Footer"
 import Navigation from "@/features/common/modules/Navigation"
 
 
@@ -6,6 +7,7 @@ import Navigation from "@/features/common/modules/Navigation"
   return (
     <>
       <Navigation/>
+      <Footer/>
     </>
   )
 }
