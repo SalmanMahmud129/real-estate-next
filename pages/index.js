@@ -1,4 +1,5 @@
 import DefaultLayout from "@/features/Layouts/DefaultLayout"
+import HeroBanner from "@/features/Home/components/HeroBanner"
 
 
 
@@ -7,7 +8,9 @@ import DefaultLayout from "@/features/Layouts/DefaultLayout"
   // we called the passed in children
   // default layout can now be the parent for the entire page regardless of where we are 
   return (
-    <DefaultLayout></DefaultLayout>
+    <DefaultLayout>
+      <HeroBanner/>
+    </DefaultLayout>
   )
 }
 
