@@ -16,7 +16,7 @@ function HeroForm() {
         <form onSubmit={handleSubmit(onSubmit)}>
             <FormControl>
                 {/* the register in brackets is essentially creating the formdata object with a key of name and the value will be gathered from the input */}
-                <Input marginTop='1.3rem' id='name' type='text' placeHolder='Name' {...register('name', {required: true })}/>
+                <Input marginTop='1.3rem' id='name' type='text' placeholder='Name' {...register('name', {required: true })}/>
                 {/* handle errors */}
                 {errors.name && (
                     <Text fontSize='xs' color='red.400'>{errors.name.type}</Text>
@@ -26,12 +26,12 @@ function HeroForm() {
                 {/* need more space for email and phone. The flex box will make phone and email side by side instead of vertical when on bigger screens. On mobile it will be vertical/column flexDir*/}
                 <Flex gap={{base:"0", sm: "1rem"}} flexDirection={{base: "column", sm: "row"}}>
 
-                <Input marginTop='1.3rem' id='email' type='email' placeHolder='Email' {...register('email', {required: true })}/>
+                <Input marginTop='1.3rem' id='email' type='email' placeholder='Email' {...register('email', {required: true })}/>
                 {errors.email && (
                     <Text fontSize='xs' color='red.400'>{errors.email.type}</Text>
                 )}
 
-                <Input marginTop='1.3rem' id='phone' type='text' placeHolder='Phone' {...register('phone', {required: true })}/>
+                <Input marginTop='1.3rem' id='phone' type='text' placeholder='Phone' {...register('phone', {required: true })}/>
                 {errors.phone && (
                     <Text fontSize='xs' color='red.400'>{errors.phone.type}</Text>
                 )}
