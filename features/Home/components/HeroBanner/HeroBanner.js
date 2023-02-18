@@ -28,8 +28,11 @@ function HeroBanner() {
             {/* first box is the left side and second is the right */}
             <Box width={{base: "100%", sm: '50%'}}>
                 <Text fontSize={{base:'4xl', sm: '5xl'}} lineHeight='shorter' marginBottom='1.5rem'>Browse from a <strong>wide selection</strong> of properties...</Text>
+                <Text fontSize={{base: 'lg', sm: '2xl'}}>Find what best suits your needs</Text>
             </Box>
-            <Box width={{base: "100%", sm: "auto"}}> <HeroForm/> </Box>
+            <Box width={{base: "100%", sm: "auto"}} marginTop={{base: '2rem', sm: "none"}}>
+              <HeroForm/> 
+            </Box>
         </Box>
     </Box>
     </Fade>
