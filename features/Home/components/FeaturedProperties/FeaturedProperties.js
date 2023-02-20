@@ -2,6 +2,8 @@ import { Box, Text } from "@chakra-ui/react"
 import PropertySlider from "./components/PropertySlider"
 function FeaturedProperties({featuredProperties}) {
 
+  console.log('featuredProperties:', featuredProperties)
+
   return (
     <Box backgroundColor='blue.50'> 
         <Box maxWidth='1280px' margin='0 auto' color='gray.600' paddingY={{base: '3rem', sm:'6rem'}}>

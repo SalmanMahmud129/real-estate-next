@@ -16,7 +16,6 @@ function PropertySlider({featuredProperties}) {
     slidesPerView={3} 
     spaceBetween={10} 
     loop={true} 
-    loopFIllGroupWithBlank={true} 
     centeredSlides={true} 
     autoplay={{delay: 2000, disableOnInteraction: true}} 
     pagination={{dynamicBullets: true}} 
