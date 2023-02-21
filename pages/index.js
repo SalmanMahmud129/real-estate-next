@@ -1,6 +1,7 @@
 import DefaultLayout from "@/features/Layouts/DefaultLayout"
 import HeroBanner from "@/features/Home/components/HeroBanner"
 import FeaturedProperties from "@/features/Home/components/FeaturedProperties"
+import MeetTheTeam from "@/features/Home/components/MeetTheTeam"
 
 
 
@@ -12,6 +13,7 @@ import FeaturedProperties from "@/features/Home/components/FeaturedProperties"
     <DefaultLayout>
       <HeroBanner/>
       <FeaturedProperties featuredProperties={featuredProperties}/>
+      <MeetTheTeam/>
     </DefaultLayout>
   )
 }
