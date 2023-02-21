@@ -1,7 +1,7 @@
 export const services = [
     { name: "Our Services", link: "/our-services" },
     { name: "Meet The Team", link: "/meet-the-team" },
-    { name: "Careers at Casaz", link: "/careers-at-casaz" },
+    { name: "Careers at Real Estate Next", link: "/careers-at-ren" },
     { name: "Latest News & Videos", link: "/latest-news" }
   ];
   
