@@ -22,7 +22,7 @@ import Testimonials from "@/features/Home/components/Testimonials"
 
 export default Home
 
-// fetches data at build time and creates a statically generated page. Will pass the data through getStaticProps to our index
+// fetches data at build time and creates a statically generated page. Will pass the data through getStaticProps to our index. Function returns a prop so that it can get passed
 export async function getStaticProps(){
   const {hits} = require('@/features/data/properties')
 
