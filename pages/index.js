@@ -27,6 +27,6 @@ export async function getStaticProps(){
   const {hits} = require('@/features/data/properties')
 
   return {
-    props: { featuredProperties: hits.slice(0,6) }
+    props: { featuredProperties: hits.slice(0,5) }
   }
 }

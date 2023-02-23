@@ -20,6 +20,9 @@ function useIsDesktop() {
     }
 
     window.addEventListener('resize', updateMedia)
+
+    // when the component unmounts, it should stop listening
+    return () => window.removeEventListener('resize', updateMedia)
   }, [])
 
   return { isDesktop }
