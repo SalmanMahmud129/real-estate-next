@@ -4,6 +4,7 @@ import { Box, Divider, Flex, Grid, GridItem, Text, Image } from "@chakra-ui/reac
 import Link from "next/link"
 import {FaLinkedin, FaGithub} from 'react-icons/fa'
 import {CgWebsite} from 'react-icons/cg'
+import ContactForm from "@/features/common/modules/ContactForm"
 
 
 function ContactPage() {
@@ -13,6 +14,7 @@ function ContactPage() {
             <Grid templateColumns='repeat(6,1fr)' gap='5' maxWidth='1280px' margin='0 auto'>
                 <GridItem colSpan={{base:6, sm: 4}}>
                     <TextContentBox title='Contact Us'>
+                        <ContactForm/>
 
 
                     </TextContentBox>
