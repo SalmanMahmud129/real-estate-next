@@ -2,6 +2,7 @@
 
 import usePropertyFormat from '@/features/common/Hooks/usePropertyFormat'
 import DefaultLayout from '@/features/Layouts/DefaultLayout'
+import PropertyDetails from '@/features/Property/components/PropertyDetails'
 import PropertyThumbnailSlider from '@/features/Property/components/PropertyThumbnailSlider'
 import { Badge, Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react'
 import { TbMapPin } from 'react-icons/tb'
@@ -46,6 +47,11 @@ function PropertyPage({property}){
                     into this PropertyPage component. The photos come from the property being passed into our custom hook and having data that we need extracted */}
                     <GridItem colSpan={{base: 6, sm: 3}}>
                         <PropertyThumbnailSlider photos={photos}/>
+                    </GridItem>
+
+                    {/* property details */}
+                    <GridItem>
+                        <PropertyDetails rooms={rooms} baths={baths} price={price} sqSize={sqSize}/>
                     </GridItem>
 
                 </Grid>
