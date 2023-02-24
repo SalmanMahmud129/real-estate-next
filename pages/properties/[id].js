@@ -4,6 +4,7 @@ import usePropertyFormat from '@/features/common/Hooks/usePropertyFormat'
 import TextContentBox from '@/features/common/modules/TextContentBox'
 import DefaultLayout from '@/features/Layouts/DefaultLayout'
 import PropertyDetails from '@/features/Property/components/PropertyDetails'
+import PropertyMatterPortEmbed from '@/features/Property/components/PropertyMatterPortEmbed'
 import PropertyThumbnailSlider from '@/features/Property/components/PropertyThumbnailSlider'
 import PropertyYoutubeEmbed from '@/features/Property/components/PropertyYoutubeEmbed'
 import { Badge, Box, Flex, Grid, GridItem, SimpleGrid, Text } from '@chakra-ui/react'
@@ -71,9 +72,13 @@ function PropertyPage({property}){
 
                     </GridItem>
 
-
-                    <GridItem>
+                    {/* embedded youtube video */}
+                    <GridItem colSpan={{base: 6, sm: 3}}>
                         <PropertyYoutubeEmbed coverVideo={coverVideo}/>
+                    </GridItem>
+
+                    <GridItem colSpan={{base: 6, sm: 3}}>
+                        <PropertyMatterPortEmbed panorama={panorama}/>
                     </GridItem>
 
                 </Grid>
