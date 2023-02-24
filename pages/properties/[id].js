@@ -50,7 +50,7 @@ function PropertyPage({property}){
                     </GridItem>
 
                     {/* property details */}
-                    <GridItem>
+                    <GridItem colSpan={{base:6, sm:3}}>
                         <PropertyDetails rooms={rooms} baths={baths} price={price} sqSize={sqSize}/>
                     </GridItem>
 
