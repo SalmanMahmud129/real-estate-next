@@ -1,10 +1,12 @@
 // any route that ends in an ID will match this file and fetch the data and render it. Seems like useParams
 
 import usePropertyFormat from '@/features/common/Hooks/usePropertyFormat'
+import TextContentBox from '@/features/common/modules/TextContentBox'
 import DefaultLayout from '@/features/Layouts/DefaultLayout'
 import PropertyDetails from '@/features/Property/components/PropertyDetails'
 import PropertyThumbnailSlider from '@/features/Property/components/PropertyThumbnailSlider'
-import { Badge, Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react'
+import PropertyYoutubeEmbed from '@/features/Property/components/PropertyYoutubeEmbed'
+import { Badge, Box, Flex, Grid, GridItem, SimpleGrid, Text } from '@chakra-ui/react'
 import { TbMapPin } from 'react-icons/tb'
 
 function PropertyPage({property}){
@@ -52,6 +54,26 @@ function PropertyPage({property}){
                     {/* property details */}
                     <GridItem colSpan={{base:6, sm:3}}>
                         <PropertyDetails rooms={rooms} baths={baths} price={price} sqSize={sqSize}/>
+
+
+                        <TextContentBox title='Description'>
+                            <Text fontWeight='light' color='gray.600' fontSize='1rem' noOfLines='4'>
+                                {description}
+                            </Text>
+                        </TextContentBox>
+
+
+                        <TextContentBox title='Amenities'>
+                            <SimpleGrid columns={{base:1, sm: 2}} fontWeight='light' color='gray.600' fontSize='1rem'>
+                                {amenities.length ? amenities.map((item) => <Text>{item}</Text>): "Please contact us for more info"}
+                            </SimpleGrid>
+                        </TextContentBox>
+
+                    </GridItem>
+
+
+                    <GridItem>
+                        <PropertyYoutubeEmbed coverVideo={coverVideo}/>
                     </GridItem>
 
                 </Grid>
