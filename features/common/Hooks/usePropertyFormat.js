@@ -46,7 +46,7 @@ const coverVideo = coverVideoUrl.slice(coverVideoUrl.length - 11)
 
 // if panoramas array contains something then give us the first object in the array
 // otherwise give an empty array
-const panorama = property.panoramas?.length ? property.panorama[0].url : []
+const panorama = property.panoramas?.length ? property.panoramas[0].url : []
 
 // flatmap condenses all nested arrays into one. Then extract/map from the second amenities array 
 const amenities = property.amenities?.flatMap(({amenities}) => amenities).map((item) => item.text)
