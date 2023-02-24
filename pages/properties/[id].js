@@ -73,12 +73,18 @@ function PropertyPage({property}){
                     </GridItem>
 
                     {/* embedded youtube video */}
-                    <GridItem colSpan={{base: 6, sm: 3}}>
-                        <PropertyYoutubeEmbed coverVideo={coverVideo}/>
+                    <GridItem colSpan={{base: 6, sm: 3}} >
+                        <TextContentBox title='Video Tour'>
+                            <PropertyYoutubeEmbed coverVideo={coverVideo}/>
+                            <Text textAlign='center' marginTop='1.5rem' padding='1rem' fontWeight='light' fontSize='1rem'>Enjoy a video walkthrough of this property</Text>
+                        </TextContentBox>
                     </GridItem>
 
                     <GridItem colSpan={{base: 6, sm: 3}}>
-                        <PropertyMatterPortEmbed panorama={panorama}/>
+                        <TextContentBox title='3D View'>
+                            <PropertyMatterPortEmbed panorama={panorama}/>
+                            <Text textAlign='center' marginTop='1.5rem' padding='1rem' fontWeight='light' fontSize='1rem'>Manually explore a 3D virtual representation of this property</Text>
+                        </TextContentBox>
                     </GridItem>
 
                 </Grid>
