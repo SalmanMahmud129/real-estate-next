@@ -23,7 +23,7 @@ function Properties({properties}) {
 export default Properties
 
 // return all properties from features folder as a prop called properties
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const properties = await getProperties(20)
 
   return {
