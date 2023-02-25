@@ -24,6 +24,21 @@ import { getProperties } from "@/features/common/api/getProperties"
 
 export default Home
 
+
+export async function getStaticProps(){
+  // call our api via getProperties and pass it a num which will be plugged into the amount of hits that we pull 
+  const featuredProperties = await getProperties(5)
+  
+  // then we return those properties as props that will be passed to the index/home above
+  return {
+    props: { featuredProperties: featuredProperties }
+  }
+}
+
+
+
+
+
 // fetches data at build time and creates a statically generated page. Will pass the data through getStaticProps to our index. Function returns a prop so that it can get passed
 // export async function getStaticProps(){
 //   const {hits} = require('@/features/data/properties')
@@ -35,13 +50,3 @@ export default Home
 
 
 // no longer need the above function because that was dealing with local json dummy data so that we dont exceed api call limit
-
-export async function getStaticProps(){
-  // call our api via getProperties and pass it a num which will be plugged into the amount of hits that we pull 
-  const featuredProperties = await getProperties(5)
-
-  // then we return those properties as props that will be passed to the index/home above
-  return {
-    props: { featuredProperties: featuredProperties }
-  }
-}
