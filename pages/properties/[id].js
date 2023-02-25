@@ -3,6 +3,7 @@
 import usePropertyFormat from '@/features/common/Hooks/usePropertyFormat'
 import TextContentBox from '@/features/common/modules/TextContentBox'
 import DefaultLayout from '@/features/Layouts/DefaultLayout'
+import { getProperty } from '@/features/Property/components/api/getProperty'
 import PropertyDetails from '@/features/Property/components/PropertyDetails'
 import PropertyMatterPortEmbed from '@/features/Property/components/PropertyMatterPortEmbed'
 import PropertyThumbnailSlider from '@/features/Property/components/PropertyThumbnailSlider'
@@ -98,10 +99,25 @@ export default PropertyPage
 
 // server side props will run before the page is shown to the user. Fetches data in real time. Different to get static props which runs at build time and makes a static html page
 
-export async function getServerSideProps(){
-    const property = require('@/features/data/property')
+// export async function getServerSideProps(){
+//     const property = require('@/features/data/property')
+
+//     return {
+//         props: { property }
+//     }
+// }
+
+
+// no longer need the above because that was for local json dummy data to avoid api call cap
+
+export async function getServerSideProps(context){
+    // context object is a part of server side props, one of the keys in this object is query 
+    console.log('context:', context)
+    const {id} = context.query
+    
+    const property = await getProperty(id)
 
     return {
-        props: { property }
+        props: { property: property }
     }
 }
